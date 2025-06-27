@@ -1,9 +1,12 @@
 
+
 function Teams() {
   const [teams, setTeams] = useState([]);
 
+  // Copilot agent mode: Codespace Django REST API endpoint suffix
+  const API_SUFFIX = 'https://musical-cod-4j79pg66pq77fq59g-8000.app.github.dev/api/teams/';
   useEffect(() => {
-    fetch('https://musical-cod-4j79pg66pq77fq59g-8000.app.github.dev/api/teams/')
+    fetch(API_SUFFIX)
       .then(res => res.json())
       .then(data => setTeams(data));
   }, []);

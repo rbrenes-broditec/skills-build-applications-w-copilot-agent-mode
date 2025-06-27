@@ -1,9 +1,12 @@
 
+
 function Leaderboard() {
   const [leaders, setLeaders] = useState([]);
 
+  // Copilot agent mode: Codespace Django REST API endpoint suffix
+  const API_SUFFIX = 'https://musical-cod-4j79pg66pq77fq59g-8000.app.github.dev/api/leaderboard/';
   useEffect(() => {
-    fetch('https://musical-cod-4j79pg66pq77fq59g-8000.app.github.dev/api/leaderboard/')
+    fetch(API_SUFFIX)
       .then(res => res.json())
       .then(data => setLeaders(data));
   }, []);

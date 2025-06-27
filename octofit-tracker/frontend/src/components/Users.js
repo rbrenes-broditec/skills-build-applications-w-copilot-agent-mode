@@ -1,9 +1,12 @@
 
+
 function Users() {
   const [users, setUsers] = useState([]);
 
+  // Copilot agent mode: Codespace Django REST API endpoint suffix
+  const API_SUFFIX = 'https://musical-cod-4j79pg66pq77fq59g-8000.app.github.dev/api/users/';
   useEffect(() => {
-    fetch('https://musical-cod-4j79pg66pq77fq59g-8000.app.github.dev/api/users/')
+    fetch(API_SUFFIX)
       .then(res => res.json())
       .then(data => setUsers(data));
   }, []);

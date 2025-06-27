@@ -1,9 +1,12 @@
 
+
 function Workouts() {
   const [workouts, setWorkouts] = useState([]);
 
+  // Copilot agent mode: Codespace Django REST API endpoint suffix
+  const API_SUFFIX = 'https://musical-cod-4j79pg66pq77fq59g-8000.app.github.dev/api/workouts/';
   useEffect(() => {
-    fetch('https://musical-cod-4j79pg66pq77fq59g-8000.app.github.dev/api/workouts/')
+    fetch(API_SUFFIX)
       .then(res => res.json())
       .then(data => setWorkouts(data));
   }, []);

@@ -3,7 +3,7 @@ function Activities() {
   const [activities, setActivities] = useState([]);
 
   // Copilot agent mode: Codespace Django REST API endpoint suffix
-  const API_SUFFIX = 'https://musical-cod-4j79pg66pq77fq59g-8000.app.github.dev/api/activity/';
+  const API_SUFFIX = 'https://musical-cod-4j79pg66pq77fq59g-8000.app.github.dev/api/activities/';
   useEffect(() => {
     fetch(API_SUFFIX)
       .then(res => res.json())
